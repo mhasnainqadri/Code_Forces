@@ -1,0 +1,68 @@
+#include<stdio.h>
+int main()
+{
+    char a[100],b[100];
+    scanf("%s",a);
+    scanf("%s",b);
+    for(int i=0;i<100;i++)
+    {
+        if(a[i]=='\0')
+        {
+            printf("0");
+            break;
+        }
+        if(a[i]>=65&&a[i]<=90&&b[i]>=65&&b[i]<=90)
+        {
+            if(a[i]>b[i])
+            {
+                printf("1");
+                break;
+            }
+            if(a[i]<b[i])
+            {
+                printf("-1");
+                break;
+            }
+        }
+        if(a[i]>=97&&a[i]<=122&&b[i]>=97&&b[i]<=122)
+        {
+            if(a[i]>b[i])
+            {
+                printf("1");
+                break;
+            }
+            if(a[i]<b[i])
+            {
+                printf("-1");
+                break;
+            }
+        }
+        if(a[i]>=65&&a[i]<=90&&b[i]>=97&&b[i]<=122)
+        {
+            if(a[i]+32>b[i])
+            {
+                printf("1");
+                break;
+            }
+            if(a[i]+32<b[i])
+            {
+                printf("-1");
+                break;
+            }
+        }
+        if(a[i]>=97&&a[i]<=122&&b[i]>=65&&b[i]<=90)
+        {
+            if(a[i]-32>b[i])
+            {
+                printf("1");
+                break;
+            }
+            if(a[i]-32<b[i])
+            {
+                printf("-1");
+                break;
+            }
+        }
+    }
+    return 0;
+}

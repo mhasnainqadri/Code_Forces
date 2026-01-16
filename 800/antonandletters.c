@@ -8,10 +8,10 @@ int main()
     {
         char distinct[strlen(line)];
         int detected;
-        distinct[0]='{',distinct[1]=',',distinct[2]='}',distinct[3]=' ';
-        for(int i=4;i<strlen(line);i++)
+        distinct[0]='{',distinct[1]=',',distinct[2]=' ',distinct[3]='}',distinct[4]='\n';
+        for(int i=5;i<strlen(line);i++)
             distinct[i]='0';
-        for(int i=0,k=4;line[i]!='\0';i++)
+        for(int i=0,k=5;line[i]!='\0';i++)
         {
             detected=0;
             for(int j=0;j<strlen(line);j++)

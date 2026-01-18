@@ -16,10 +16,11 @@ int main()
 // Function Definitions :
 bool solution(const char *str1,const char *str2,const char *str3)
 {
-    int freq[256]={0};
-    for(int i=0;str1[i]!='\0';i++) freq[(unsigned char)str1[i]]++;
-    for(int i=0;str2[i]!='\0';i++) freq[(unsigned char)str2[i]]++;
-    for(int i=0;str3[i]!='\0';i++) freq[(unsigned char)str3[i]]--;
+    int len_dif=0,freq[256]={0};
+    for(int i=0;str1[i]!='\0';i++){ len_dif++; freq[(unsigned char)str1[i]]++; }
+    for(int i=0;str2[i]!='\0';i++){ len_dif++; freq[(unsigned char)str2[i]]++; }
+    for(int i=0;str3[i]!='\0';i++){ len_dif--; freq[(unsigned char)str3[i]]--; }
+    if(len_dif!=0) return false;
     for(int i=0;i<256;i++)
         if(freq[i]!=0)
             return false;

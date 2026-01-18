@@ -3,7 +3,7 @@
 
 // Function Declarations :
 void stringMerger(char *str1,char *str2);
-bool areAnagrams(char str1[],char str2[]);
+bool areAnagrams(char *str1,char *str2);
 
 // Main Function :
 int main()

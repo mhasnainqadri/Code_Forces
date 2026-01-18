@@ -25,7 +25,7 @@ void stringMerger(char *str1,char *str2)
     for(int i=0;i<len2;i++) str1[len1+i]=str2[i];
     str1[len1+len2]='\0';
 }
-bool areAnagrams(char str1[],char str2[])
+bool areAnagrams(char *str1,char *str2)
 {
     int len1=0,len2=0;
     for(int i=0;str1[i]!='\0';i++) len1++;

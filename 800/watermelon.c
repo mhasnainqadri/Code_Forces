@@ -1,8 +1,7 @@
 #include<stdio.h>
-#include<stdbool.h>
 
 // Function Declaration
-bool solution(int weight);
+int solution(int weight);
 
 // Main Function
 int main()
@@ -14,9 +13,9 @@ int main()
 }
 
 // Function Definition
-bool solution(int weight)
+int solution(int weight)
 {
     if(weight%2==0&&weight>2)
-        return true;
-    return false;
+        return 1;
+    return 0;
 }

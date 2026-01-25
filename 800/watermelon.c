@@ -1,14 +1,22 @@
 #include<stdio.h>
+#include<stdbool.h>
+
+// Function Declaration
+bool solution(int weight);
+
+// Main Function
 int main()
 {
     int weight;
     scanf("%d",&weight);
-    if(weight>=1&&weight<=100)
-    {
-        if(weight%2==0&&weight>=4)
-        printf("Yes");
-    else
-        printf("No");
-    }
+    printf("%s",(solution(weight))?"YES":"NO");
     return 0;
+}
+
+// Function Definition
+bool solution(int weight)
+{
+    if(weight%2==0&&weight>2)
+        return true;
+    return false;
 }
